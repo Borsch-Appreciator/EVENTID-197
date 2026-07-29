@@ -122,12 +122,19 @@ Provide your feedback on BizChat
 It looks like the commands /server-info.action?bootstrapStatusProvider.applicationConfig.setupComplete=false, /setup/setupadministrator.action
 Request Method, and  /setup/setupadministrator.action all posted without issue which is alarming. With these findings I'd escalate and recommend immediate quaranting of the affected serv. Switching to the EndPoint Security
 
+## MITRE ATT&CK Mapping
 
+|Tactic|Initial Access|
+|-----|-----|
+|Technique|T1190 - Exploit Public-Facing Application|
+|Evidence|Attempted exploitation of Confluence CVE-2023-22515.|
 
+|Tactic|Persistence|
+|-----|-----|
+|Technique|T1098 - Account Manipulation|
+|Evidence|Exploit chain was attempting to create a new administrator account.|
 
-
-
-
-
-
-
+|Tactic|Privilege Escalation|
+|-----|-----|
+|Technique|T1078 - Valid Accounts|
+|Evidence|Successful creation of an unauthorized administrator account would provide elevated privileges.|
